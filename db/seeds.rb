@@ -4,21 +4,25 @@ if Book.count == 0
   book.title = "To Kill a Mockingbird"
   book.photo_url = "http://ecx.images-amazon.com/images/I/51grMGCKivL._SX307_BO1,204,203,200_.jpg"
   book.price = 5.89
+  book.save
 
   book = Book.new
   book.title = "A Tale of Two Cities"
   book.photo_url = "http://ecx.images-amazon.com/images/I/51QLNIOvdBL._SX330_BO1,204,203,200_.jpg"
   book.price = 8.65
+  book.save
 
   book = Book.new
   book.title = "How to Win Friends & Influence People"
   book.photo_url = "http://ecx.images-amazon.com/images/I/41%2B7Y%2BI2kTL._SX314_BO1,204,203,200_.jpg"
   book.price = 8.22
+  book.save
 
   book = Book.new
   book.title = "Just a Mess"
   book.photo_url = "http://ecx.images-amazon.com/images/I/619QDPrxhoL._SY497_BO1,204,203,200_.jpg"
   book.price = 3.94
+  book.save
 
 end
 
@@ -33,6 +37,7 @@ if Author.count == 0
   it won the 1961 Pulitzer Prize and has become a classic of modern
   American literature.
   """
+  author.save
 
   author = Author.new
   author.first_name = "Charles"
@@ -42,6 +47,7 @@ if Author.count == 0
   He created some of the world's best-known fictional characters and is
   regarded as the greatest novelist of the Victorian era.
   """
+  author.save
 
   author = Author.new
   author.first_name = "Dale"
@@ -51,6 +57,7 @@ if Author.count == 0
   developer of famous courses in self-improvement, salesmanship, corporate
   training, public speaking, and interpersonal skills.
   """
+  author.save
 
   author = Author.new
   author.first_name = "Mercer"
@@ -61,5 +68,6 @@ if Author.count == 0
   of the award-winning author/illustrator's books, and out may pop dragons,
   cuddly monsters, wonderful creatures, and endearing critters.
   """
+  author.save
 
 end
