@@ -1,0 +1,26 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'books';
+@import 'authors';
+
+
+.header {
+  display: flex;
+  background-image: url(https://images5.alphacoders.com/469/469141.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+  font-family: 'Metal Mania', cursive;
+  color: #E67E22;
+  justify-content: center;
+  align-items: center;
+    h1 {
+      margin: 0 auto;
+      font-size: 100px;
+      text-shadow: 4px 4px #ff0000;
+        a {
+          text-decoration: none;
+          color: #E67E22;
+        }
+    }
+}
