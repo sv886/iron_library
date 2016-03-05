@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   get 'authors' => 'authors#index', as: :authors
   get 'authors/new' => 'authors#new', as: :new_author
   get 'authors/:id' => 'authors#show', as: :author
-  get 'authors/create'
-  get 'authors/delete'
+  post 'authors' => 'authors#create'
+  delete 'authors/:id' => 'authors#delete'
   get 'authors/edit'
   get 'authors/update'
 

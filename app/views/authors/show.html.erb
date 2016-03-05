@@ -1,2 +1,10 @@
-<h1>Authors#show</h1>
-<p>Find me in app/views/authors/show.html.erb</p>
+
+<div class="container">
+    <div class="details">
+      <h2>Name:</h2>
+      <h3><%= @author.full_name %></h3>
+      <h2>Bio:</h2>
+      <h3><%= @author.bio %></h3>
+      <h2><%= link_to "Delete Author", author_path(id: @author.id), method: :delete, data: {confirm: "Delete Author?"}, class:"btn btn-danger" %></h2>
+    </div>
+</div>
