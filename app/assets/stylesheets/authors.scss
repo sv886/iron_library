@@ -1,3 +1,18 @@
-// Place all the styles related to the authors controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.container-authors {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: 'Metal Mania', cursive;
+  color: #E67E22;
+  text-shadow: 1px 1px #ff0000;
+  background-color: #000000;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  li {
+    a{
+      font-size: 30px;
+      text-decoration: none;
+      color: #E67E22;
+    }
+  }
+}

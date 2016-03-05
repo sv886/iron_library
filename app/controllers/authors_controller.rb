@@ -1,4 +1,15 @@
 class AuthorsController < ApplicationController
+  def index
+    @authors = Author.all
+  end
+
+  def new
+  end
+
+  def show
+    @author = Author.find_by id: params[:id]
+  end
+
   def create
   end
 
@@ -6,12 +17,6 @@ class AuthorsController < ApplicationController
   end
 
   def edit
-  end
-
-  def new
-  end
-
-  def show
   end
 
   def update
