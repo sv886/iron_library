@@ -4,24 +4,28 @@ if Book.count == 0
   book.title = "To Kill a Mockingbird"
   book.photo_url = "http://ecx.images-amazon.com/images/I/51grMGCKivL._SX307_BO1,204,203,200_.jpg"
   book.price = 5.89
+  book.author_id = 1
   book.save
 
   book = Book.new
   book.title = "A Tale of Two Cities"
   book.photo_url = "http://ecx.images-amazon.com/images/I/51QLNIOvdBL._SX330_BO1,204,203,200_.jpg"
   book.price = 8.65
+  book.author_id = 2
   book.save
 
   book = Book.new
   book.title = "How to Win Friends & Influence People"
   book.photo_url = "http://ecx.images-amazon.com/images/I/41%2B7Y%2BI2kTL._SX314_BO1,204,203,200_.jpg"
   book.price = 8.22
+  book.author_id = 3
   book.save
 
   book = Book.new
   book.title = "Just a Mess"
   book.photo_url = "http://ecx.images-amazon.com/images/I/619QDPrxhoL._SY497_BO1,204,203,200_.jpg"
   book.price = 3.94
+  book.author_id = 4
   book.save
 
 end
