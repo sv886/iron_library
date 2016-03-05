@@ -18,7 +18,7 @@ class AuthorsController < ApplicationController
     @author.bio = params[:author][:bio]
 
     if @author.save
-      # redirect to "/"
+      # redirect to "authors"
       redirect_to authors_path
     else
       render :new
