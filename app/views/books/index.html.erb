@@ -5,8 +5,8 @@
     <% @books.each do |book| %>
     <div class="span3">
       <div class="img"><%= link_to image_tag(book.photo_url), book_path(id: book.id) %></div>
-      <h3><%= book.title %></h3>
-      <h3><%= book.price %></h3>
+      <h4><%= book.title %></h4>
+      <h4>$<%= book.price %></h4>
     </div>
       <% end %>
   </div>

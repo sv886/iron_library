@@ -8,5 +8,7 @@
       <h3><%= @book.title %></h3>
       <h2>Price:</h2>
       <h3>$<%= @book.price %></h3>
+      <h2><%= link_to "Edit Price", edit_book_path(id: @book.id), class: "btn btn-primary"%></h2>
+    <h2><%= link_to "Delete Entry", book_path(id: @book.id), method: :delete, data: {confirm: "Delete book?"}, class:"btn btn-danger" %></h2>
     </div>
 </div>

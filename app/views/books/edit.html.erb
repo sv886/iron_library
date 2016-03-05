@@ -1,2 +1,29 @@
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+
+<div class="container">
+    <div class="image">
+      <div><%= image_tag(@book.photo_url) %></div>
+    </div>
+    <div class="details">
+      <h2>Update <%= @book.title %></h2>
+      <% if @book.errors.any? %>
+        <% @book.errors.full_messages.each do |error| %>
+          <p class="alert alert-danger"><strong>Input Error: <%= error %></strong></p>
+        <% end %>
+      <% end %>
+
+      <%= form_for @book do |book| %>
+
+        <div class="form-group">
+          <%= book.label :price %>
+          <%= book.text_field :price, class: "form-control" %>
+        </div>
+
+        <div class="">
+          <%= book.submit "Update Price", class: "btn btn-primary" %>
+        </div>
+
+      <% end %>
+      <h2><div><%= link_to "Delete Entry", book_path(id: @book.id), method: :delete, data: {confirm: "Delete book entry?"}, class:"btn btn-danger" %></div></h2>
+      <hr>
+    </div>
+</div>
