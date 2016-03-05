@@ -9,10 +9,21 @@
 </head>
 <body>
   <nav class="header">
+    <h3>
+      <%= link_to "Add Book", new_book_path, class: "btn btn-success" %>
+    </h3>
+    <h2>
+      <%= link_to "View Books", root_path %>
+    </h2>
     <h1>
       <%= link_to "IronLibrary", root_path %>
     </h1>
-    <h2><%= link_to "Add Book", new_book_path, class: "btn btn-success" %></h2>
+    <h2>
+      <%= link_to "View Authors", authors_path %>
+    </h2>
+    <h3>
+      <%= link_to "Add Author", new_author_path, class: "btn btn-success" %>
+    </h3>
   </nav>
 
 

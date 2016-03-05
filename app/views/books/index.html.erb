@@ -1,15 +1,12 @@
-<!DOCTYPE html>
 
 <div class="container-fluid">
   <div class="row-fluid">
     <% @books.each do |book| %>
     <div class="span3">
       <div class="img"><%= link_to image_tag(book.photo_url), book_path(id: book.id) %></div>
-      <h4><%= book.title %></h4>
+      <h4><%= link_to book.title, book_path(id: book.id) %></h4>
       <h4>$<%= book.price %></h4>
     </div>
       <% end %>
   </div>
 </div>
-
-</html>

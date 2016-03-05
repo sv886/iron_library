@@ -1,0 +1,8 @@
+
+<div class="container-authors">
+    <% @authors.each do |author| %>
+      <ul>
+        <li><%= link_to author.full_name, author_path(id: author.id) %></li>
+      </ul>
+      <% end %>
+</div>

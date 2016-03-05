@@ -8,11 +8,12 @@ Rails.application.routes.draw do
   patch 'books/:id' => 'books#update'
   delete 'books/:id' => 'books#delete'
 
+  get 'authors' => 'authors#index', as: :authors
+  get 'authors/new' => 'authors#new', as: :new_author
+  get 'authors/:id' => 'authors#show', as: :author
   get 'authors/create'
   get 'authors/delete'
   get 'authors/edit'
-  get 'authors/new'
-  get 'authors/show'
   get 'authors/update'
 
 end
