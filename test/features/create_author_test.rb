@@ -7,6 +7,8 @@ class CreateAuthorTest < Capybara::Rails::TestCase
     visit root_path
     click_link "Add Author"
 
+    # save_and_open_page
+
     within("#new_author") do
       fill_in "First name", with: "Bob"
       fill_in "Last name", with: "Loblaw"
@@ -20,6 +22,8 @@ class CreateAuthorTest < Capybara::Rails::TestCase
     # 2. Author.find_by first_name: "Bob"
 
     visit authors_path
+
+    # save_and_open_page
 
     assert_content page, "Bob"
 
