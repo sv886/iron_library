@@ -19,6 +19,7 @@
           <%= book.text_field :title, class: "form-control" %>
         </div>
 
+        <%= book.label :author_id %>
         <%= book.collection_select(:author_id, Author.all.order("last_name asc"), :id, :full_name, {prompt: "Select Author"}) %>
 
         <div class="form-group">
