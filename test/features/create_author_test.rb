@@ -27,7 +27,7 @@ class CreateAuthorTest < Capybara::Rails::TestCase
 
     # visit root_path
 
-    save_and_open_page
+    # save_and_open_page
 
     assert_content page, "Test Book"
 
