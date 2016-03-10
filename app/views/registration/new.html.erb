@@ -1,2 +1,36 @@
-<h1>Registration#new</h1>
-<p>Find me in app/views/registration/new.html.erb</p>
+<div class="registration_container">
+
+    <h1>Register Here</h1>
+
+    <% if @user.errors.any? %>
+      <%= pluralize(@user.errors.count, 'error') %> need your attention.
+      <ul class="mdl-list">
+        <% @user.errors.full_messages.each do |msg| %>
+          <li class="mdl-list__item"><%= msg %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <%= form_for @user do |f| %>
+      <div class="">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+
+      <div class="">
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+      </div>
+
+      <div class="">
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+      </div>
+
+      <div class="">
+        <%= f.submit class: "btn btn-success" %>
+
+      </div>
+    <% end %>
+
+</div>
