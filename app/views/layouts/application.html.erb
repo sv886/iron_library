@@ -9,7 +9,11 @@
 </head>
 <body>
   <div class="login">
-    <%= link_to "Log In Here", login_path, class: "btn btn-default btn-block" %>
+    <% if @current_user %>
+        <%= link_to "Log Out Here", logout_path, class: "btn btn-default btn-block" %>
+      <% else %>
+        <%= link_to "Log In Here", login_path, class: "btn btn-default btn-block" %>
+      <% end %>
   </div>
   <nav class="header">
     <h3>

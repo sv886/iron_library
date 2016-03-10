@@ -1,3 +1,16 @@
+.welcome {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  width: 100%;
+  font-family: 'Metal Mania', cursive;
+  color: #E67E22;
+  text-shadow: 1px 1px #ff0000;
+  background-color: #000000;
+}
+
 .container-fluid {
   display: flex;
   flex-direction: row;

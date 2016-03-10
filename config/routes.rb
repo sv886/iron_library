@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get  'login' => 'session#new', as: :login
   post 'login' => 'session#create'
-  get 'logout' => 'session/delete', as: :logout
+  get 'logout' => 'session#delete', as: :logout
 
   get '/register' => 'registration#new', as: :new_user
   post 'register' => 'registration#create', as: :users
