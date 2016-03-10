@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'registration/new'
+
+  get 'registration/create'
+
   root 'books#index'
 
 
