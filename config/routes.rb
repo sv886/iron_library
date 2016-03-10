@@ -1,6 +1,25 @@
 Rails.application.routes.draw do
 
   root 'books#index'
+
+
+
+  get  'login' => 'session#new', as: :login
+
+  post 'login' => 'session#create'
+
+  get 'logout' => 'session/delete', as: :logout
+
+
+  # get 'sign_in' => 'session#new', as: :sign_in
+  # post 'sign_in' => 'session#create'
+  # get 'sign_out' => 'session#delete', as: :sign_out
+  #
+  # get '/register' => 'registration#new', as: :new_user
+  # post '/register' => 'registration#create', as: :users
+
+
+
   get 'books/new' => 'books#new', as: :new_book
   get 'books/:id' => 'books#show', as: :book
   post 'books' => 'books#create', as: :books
