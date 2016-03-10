@@ -11,7 +11,6 @@ class CreateAuthorTest < Capybara::Rails::TestCase
     visit root_path
     click_link "Add Book"
 
-    # save_and_open_page
 
     within("#new_book") do
       fill_in "Photo url", with: "book.jpg"
@@ -25,9 +24,9 @@ class CreateAuthorTest < Capybara::Rails::TestCase
     # 1. visit authors_path and check if "Bob"
     # 2. Author.find_by first_name: "Bob"
 
-    # visit root_path
+    visit root_path
 
-    # save_and_open_page
+    save_and_open_page
 
     assert_content page, "Test Book"
 
