@@ -8,6 +8,9 @@
   <link href='https://fonts.googleapis.com/css?family=Metal+Mania' rel='stylesheet' type='text/css'>
 </head>
 <body>
+  <div class="login">
+    <%= link_to "Log In Here", login_path, class: "btn btn-success btn-block" %>
+  </div>
   <nav class="header">
     <h3>
       <%= link_to "Add Book", new_book_path, class: "btn btn-success" %>
@@ -25,7 +28,6 @@
       <%= link_to "Add Author", new_author_path, class: "btn btn-success" %>
     </h3>
   </nav>
-
 
 <%= yield %>
 
