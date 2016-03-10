@@ -12,13 +12,15 @@
         <%= label_tag :password %>
         <%= password_field_tag :password %>
       </div>
+
+      <div class="session_buttons">
+        <%= submit_tag "Login", class: "btn btn-success" %>
+        or
+        <%= link_to 'Register', new_user_path, class: "btn btn-default" %>
+      </div>
   </div>
 
-  <div class="session_buttons">
-    <%= submit_tag "Login", class: "btn btn-success" %>
-    or
-    <%= link_to 'Register', new_user_path, class: "btn btn-default" %>
-  </div>
+
 
     <% end %>
 </div>
