@@ -1,6 +1,19 @@
 class BooksController < ApplicationController
+  before_action do
+
+    @current_user = User.find_by id: session[:user_id]
+    if @current_user.blank?
+      redirect_to login_path
+    end
+  end
+
   def index
     @books = Book.all
+
+    user_id = session[:user_id]
+    if user_id.present?
+      @current_user = User.find_by id: user_id
+    end
   end
 
   def new
