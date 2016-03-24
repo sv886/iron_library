@@ -22,6 +22,21 @@
   text-shadow: 1px 1px #ff0000;
   background-color: #000000;
   font-size: 30px;
+    .react_button {
+      display: flex;
+      padding: 15px;
+      justify-content: center;
+      align-content: center;
+    }
+    .react_cover_container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+      .react_cover {
+        padding: 20px 40px;
+      }
+  }
 }
 
 .reat_link{
