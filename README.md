@@ -1,6 +1,14 @@
-Welcome to the IronLibrary!
+#Welcome to the IronLibrary!
 
 Enjoy browsing through our collection of books and authors.
+
+##Homepage
+
+![img](homepage.png)
+
+##Book Details
+
+![img](book_show.png)
 
 To add an entry, follow these steps:
 
