@@ -25,4 +25,9 @@ Rails.application.routes.draw do
   get 'authors/edit'
   get 'authors/update'
 
+  namespace :api do
+    get 'books' => 'books#index', as: :books
+    post 'books' => 'books#create'
+  end
+
 end
