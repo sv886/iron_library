@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'books/:id' => 'books#show', as: :book
   post 'books' => 'books#create', as: :books
   get 'books/:id/edit' => 'books#edit', as: :edit_book
+  get 'react' => 'books#react', as: :react
   patch 'books/:id' => 'books#update'
   delete 'books/:id' => 'books#delete'
 

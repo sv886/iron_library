@@ -11,6 +11,35 @@
   background-color: #000000;
 }
 
+.react {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: 'Metal Mania', cursive;
+  color: #E67E22;
+  text-shadow: 1px 1px #ff0000;
+  background-color: #000000;
+  font-size: 30px;
+}
+
+.reat_link{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: 'Metal Mania', cursive;
+  color: #E67E22;
+  text-shadow: 1px 1px #ff0000;
+  background-color: #000000;
+    a {
+      text-decoration: none;
+      color: #E67E22;
+      font-size: 50px;
+    }
+}
 .container-fluid {
   display: flex;
   flex-direction: row;

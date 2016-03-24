@@ -3,6 +3,9 @@
       Welcome back, <%= @current_user.name %>!
     <% end %>
 </div>
+<div class="reat_link">
+  <%= link_to "React Exercise", react_path %>
+</div>
 <div class="container-fluid">
   <div class="row-fluid">
     <% @books.each do |book| %>
