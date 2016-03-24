@@ -28,7 +28,6 @@ Rails.application.routes.draw do
 
   namespace :api do
     get 'books' => 'books#index', as: :books
-    post 'books' => 'books#create'
   end
 
 end
