@@ -1,6 +1,22 @@
 Rails.application.routes.draw do
 
 
+  get 'carts/remove_from_cart'
+
+  get 'carts/add_to_cart'
+
+  get 'carts/view'
+
+  get 'checkout/start'
+
+  get 'checkout/process'
+
+  get 'checkout/receipt'
+
+  get 'orders/index'
+
+  get 'orders/show'
+
   root 'books#index'
 
   get  'login' => 'session#new', as: :login
