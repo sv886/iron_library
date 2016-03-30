@@ -1,21 +1,16 @@
 Rails.application.routes.draw do
 
 
-  get 'carts/remove_from_cart'
+  get 'cart' => 'carts#view', as: :cart
+  post 'cart' => 'carts#add_to_cart', as: :add_to_cart
+  delete 'cart' => 'carts#remove_from_cart', as: :remove_from_cart
 
-  get 'carts/add_to_cart'
-
-  get 'carts/view'
-
-  get 'checkout/start'
-
-  get 'checkout/process'
-
-  get 'checkout/receipt'
-
-  get 'orders/index'
-
-  get 'orders/show'
+  # get 'checkout#start'
+  # get 'checkout#process'
+  # get 'checkout#receipt'
+  #
+  # get 'orders#index'
+  # get 'orders#show'
 
   root 'books#index'
 

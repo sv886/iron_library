@@ -3,6 +3,7 @@ class CartsController < ApplicationController
   end
 
   def add_to_cart
+    
   end
 
   def view
