@@ -1,0 +1,12 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  purchased_at: 2016-03-29 23:53:05
+  status: MyString
+
+two:
+  user_id: 1
+  purchased_at: 2016-03-29 23:53:05
+  status: MyString

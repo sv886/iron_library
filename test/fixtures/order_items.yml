@@ -1,0 +1,18 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  order_id: 1
+  product_id: 1
+  shipped: false
+  quantity: 1
+  shipping_cost: 9.99
+  price: 9.99
+
+two:
+  order_id: 1
+  product_id: 1
+  shipped: false
+  quantity: 1
+  shipping_cost: 9.99
+  price: 9.99
