@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thanks for ordering from Iron Library, <%= @current_user %>!</h1>
+    <p>
+      Your order details:
+
+     <% @order.order_items.each do |order_item| %>
+      <ul>
+        <li>Book: <%= order_item.book.title %> Qty: <%= order_item.quantity %></li>
+        <li>Item Price: <%= number_to_currency order_item.total_price %></li>
+      </ul>
+      <% end %>
+      <br>
+    </p>
+    <p>
+      Total: <%= number_to_currency @order.total_price %>.
+    </p>
+    <p>Happy reading!</p>
+  </body>
+</html>
