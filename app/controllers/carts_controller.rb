@@ -8,6 +8,12 @@ class CartsController < ApplicationController
   end
 
   def remove_from_cart
+    @book = Book.find_by id: params[:book_id]
+    order = Order.find_by status: 'cart', user_id: @current_user.id
+
+    order_item = OrderItem.find_by order_id: order.id, book_id: @book.id
+    order_item.destroy
+    redirect_to cart_path
   end
 
   def add_to_cart
@@ -41,7 +47,7 @@ class CartsController < ApplicationController
     order_item.save!
 
     # this was a POST, so we need to redirect somewhere
-    redirect_to book_path(id: @book.id)
+    redirect_to cart_path
   end
 
   def view

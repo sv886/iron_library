@@ -1,6 +1,9 @@
 <div class="welcome">
   <% if @current_user %>
       Welcome back, <%= @current_user.name %>!
+      <%= link_to cart_path, class: "button" do %>
+        <i class="glyphicon glyphicon-shopping-cart gi-3x"></i>
+      <% end %>
     <% end %>
 </div>
 <div class="reat_link">
