@@ -1,46 +1,62 @@
-<h1>Carts#view</h1>
-<p>Find me in app/views/carts/view.html.erb</p>
+<div class="container">
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Item
-      </th>
-      <th>
-        Quantity
-      </th>
-      <th>
-        Per Item Price
-      </th>
-      <th>
-        Total Price
-      </th>
-      <th>
-        Remove
-      </th>
-    </tr>
-  </thead>
+  <div class="cart">
 
-  <tbody>
-    <% @order.order_items.each do |order_item| %>
+    <div class="total">
+      <strong>Current Total: </strong>
 
-    <tr>
-      <td>
-        <%= order_item.book.title %>
-      </td>
-      <td>
-        <%= order_item.quantity %>
-      </td>
-      <td>
-        <%= number_to_currency order_item.price %>
-      </td>
-      <td>
-        <%= number_to_currency order_item.total_price %>
-      </td>
-      <td>
-        <%= link_to "Remove", remove_from_cart_path(book_id: order_item.book.id), method: :delete, data: {confirm: "Remove '#{order_item.book.title}' from cart?"} %>
-      </td>
-    </tr>
+       <%= number_to_currency @order.total_price %>
+    </div>
 
-    <% end %>
+    <div class="table">
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Item
+            </th>
+            <th>
+              Quantity
+            </th>
+            <th>
+              Per Item Price
+            </th>
+            <th>
+              Total Price
+            </th>
+            <th>
+              Remove
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @order.order_items.each do |order_item| %>
+          <tr>
+            <td>
+              <%= order_item.book.title %>
+            </td>
+            <td>
+              <%= order_item.quantity %>
+            </td>
+            <td>
+              <%= number_to_currency order_item.price %>
+            </td>
+            <td>
+              <%= number_to_currency order_item.total_price %>
+            </td>
+            <td>
+              <%= link_to "Remove", remove_from_cart_path(book_id: order_item.book.id), method: :delete, data: {confirm: "Remove '#{order_item.book.title}' from cart?"} %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="checkout">
+      <%= link_to "Checkout", checkout_path, class: "btn btn-warning" %>
+    </div>
+
+  </div>
+</div>

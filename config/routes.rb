@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   post 'cart' => 'carts#add_to_cart', as: :add_to_cart
   delete 'cart' => 'carts#remove_from_cart', as: :remove_from_cart
 
-  # get 'checkout#start'
-  # get 'checkout#process'
+  get 'checkout' => 'checkout#start', as: :checkout
+  post 'checkout' => 'checkout#process', as: :process
   # get 'checkout#receipt'
   #
   # get 'orders#index'
