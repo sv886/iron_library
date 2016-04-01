@@ -1,3 +1,11 @@
-// Place all the styles related to the Carts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  font-size: 40px;
+  .cart {
+    display: flex;
+    flex-direction: column;
+  }
+}
