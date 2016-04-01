@@ -33,7 +33,13 @@
         <%= order_item.quantity %>
       </td>
       <td>
-        <%= order_item.price %>
+        <%= number_to_currency order_item.price %>
+      </td>
+      <td>
+        <%= number_to_currency order_item.total_price %>
+      </td>
+      <td>
+        <%= link_to "Remove", remove_from_cart_path(book_id: order_item.book.id), method: :delete, data: {confirm: "Remove '#{order_item.book.title}' from cart?"} %>
       </td>
     </tr>
 
