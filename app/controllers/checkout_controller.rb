@@ -8,11 +8,13 @@ class CheckoutController < ApplicationController
   end
 
   def start
-     @order = Order.find_by status: 'cart', user_id: @current_user.id
   end
-  # 
-  # def process
-  # end
+
+  def process
+    @order = Order.find_by status: 'cart', user_id: @current_user.id
+    OrderMailer.send_email(@order, @current_user).deliver_now
+    redirect_to root_path
+  end
 
   def receipt
   end
